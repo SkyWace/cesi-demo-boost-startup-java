@@ -6,15 +6,15 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '0 2 * * 1'  # Tous les lundis à 2h du matin
-  workflow_dispatch:  # Permet le déclenchement manuel
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
 
 permissions:
   security-events: write
   contents: read
   actions: read
 
-jjobs:
+jobs:
   # ═══════════════════════════════════════════════
   # ÉTAPE 1 : BUILD & TESTS
   # ═══════════════════════════════════════════════
